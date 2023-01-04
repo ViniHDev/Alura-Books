@@ -1,0 +1,178 @@
+.carrossel__titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    padding: 1.25em 0 0.5em 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+.swiper {
+    width: 89%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: 0.5em 0;
+}
+
+.card {
+    background-color: var(--branco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 24px;
+    padding: 1em;
+    display: flex;
+}
+
+.card__descricao {
+    margin-bottom: 0.5em;
+}
+
+.card__botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botoes {
+    display: flex;
+    padding-top: 1em;
+}
+
+.botoes__item {
+    margin: 0 0.5em;
+}
+
+.botoes__ancora {
+    color: var(--branco);
+    background-color: var(--laranja);
+    padding: 12px 35px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+    position: bottom;
+}
+
+.descricao__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.descricao__titulo-livro {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0.5em 0;
+}
+
+.descricao__texto {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    width: 79%;
+}
+
+.estrelinhas {
+    margin-bottom: 0.3em;
+}
+
+.descricao__imagem {
+    width: 162px;
+    height: 168px;
+}
+
+.segundo__carrossel {
+    border-bottom: 16px solid var(--cor-de-fundo);
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .carrossel__titulo {
+        padding: 6px 0 16px 0;
+        font-size: 26px;
+        line-height: 39px;
+        border-top: 45px var(--branco) solid;
+    }
+
+    .swiper-pagination {
+        margin: 2em 0 4.84em 0;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        display: block;
+        top: 62%;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+    }
+
+    .card {
+        width: 50%;
+        margin: 61.5px auto 48px auto;
+    }
+
+    .card__descricao {
+        position: relative;
+    }
+
+    .botoes {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .botoes__ancora {
+        margin: 12px 0 0 0;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+
+    .carrossel__container {
+        display: flex;
+        align-items: center;
+        padding: 0 174px 126px 213px;
+    }
+
+    .card {
+        margin: 125px 0 0 0px;
+        width: 588px;
+    }
+
+    .descricao__titulo {
+        margin-right: 40px;
+    }
+
+    .swiper-pagination {
+        margin: 74px 0 40px 0;
+    }
+
+    .swiper {
+        width: 40%;
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+}

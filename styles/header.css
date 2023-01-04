@@ -1,0 +1,220 @@
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.imagem-container {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.container__imagem {
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__menu-hamburguer {
+    background-image: url('../img/Menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 36px;
+    height: 24px;
+    padding-left: 24px;
+    padding-top: 28px;
+}
+
+.logo-alura {
+    position: absolute;
+    left: 70px;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__rotulo {
+    position: absolute;
+    height: 60px;
+    top: 0;
+}
+
+.container__botao:checked ~ .container__rotulo { 
+    background: var(--azul-degrade);
+    border-bottom: 10px solid var(--azul);
+}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url("../img/Menu Aberto.svg");
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 70.093457943925%;
+}
+
+.container__botao:checked~.lista-menu{
+    display: block;
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    color: var(--azul);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.lista-menu__titulo, .lista-menu__item, .lista-desktop__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__item:hover {
+    background: var(--azul-degrade);
+}
+
+.lista-desktop__item:hover {
+    background: var(--azul-degrade);
+}
+
+.lista-menu__item:hover .lista-menu__link {
+    color: var(--branco);
+}
+
+.lista-desktop__item:hover .lista-menu__link-2 {
+    color: var(--branco);
+}
+
+.lista-menu__link-2 {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 400;
+}
+
+.lista-menu__link-2:hover {
+    color: white;
+}
+
+/* 1024px */
+
+.container__titulo, .menu__desktop, .favoritos, .minha-estante, .container__imagem-desktop {
+    display: none;
+}
+
+.container__imagem-desktop {
+    gap: 35px;
+}
+
+.favoritos, .minha-estante {
+    text-decoration: none;
+}
+
+.cabecalho-desktop {
+    position: relative;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.lista-desktop {
+    display: none;
+    position: absolute;
+    top: 54.4px; 
+}
+
+.container__botao-desktop:checked~.label-desktop {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    padding: 10px 0;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .logo-alura {
+        position: static;
+    }
+
+    .container__titulo {
+        display: inherit;
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        line-height: 30px;
+        padding-top: 10px;
+    }
+
+    .container__titulo-negrito {
+        font-weight: 700;
+    }
+
+    .container-mobile, .menu__mobile, #menu-desktop, .container__imagem-secundaria {
+        display: none;
+    }
+    
+    .menu__desktop, .favoritos, .minha-estante, .container__imagem-desktop {
+        display: inherit;
+    }
+
+    .favoritos, .minha-estante {
+        color: var(--preto);
+    }
+
+    .container__botao-desktop:checked~.lista-desktop {
+        display: inline-block;
+    }
+
+    .cabecalho {
+        justify-content: space-evenly;
+    }
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width: 1728px) { 
+
+    .container__texto {
+        display: inherit;
+    }
+
+    .ancora-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .ancora-container {
+        text-decoration: none;
+        color: var(--preto);
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .cabecalho {
+        padding: 0 80px;
+        justify-content: space-between;
+    }
+
+    .container__imagem-desktop {
+        padding-left: 450px;
+    }
+
+    .container {
+        padding-right: 30px;
+    }
+
+}
